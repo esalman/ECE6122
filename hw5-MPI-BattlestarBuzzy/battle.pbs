@@ -1,0 +1,10 @@
+#PBS -N out
+#PBS -q coc-ice
+#PBS -l nodes=4:ppn=2
+#PBS -l walltime=10:00
+
+cd /nv/coc-ice/msalman31/ECE6122/hw5
+
+module load gcc mvapich2
+mpic++ battle.cpp 
+mpirun -n 8 ./a.out
